@@ -43,7 +43,7 @@ python3 test.py
 
 The server accepts requests on port 3003. Below is a description of the API. 
 
-#### \<ip\>:3003/restaurants
+#### localhost:3003/v1/restaurants
 
 **Request Type:** `GET`
 
@@ -59,17 +59,9 @@ Returns a list of restaurants found in the database. If `cuisine` and/or `grade`
 restaurants of a given `cuisine` type that have Health Department ratings of `grade` or higher. Max limit of 50 results. 
 Order not quaranteed. 
 
-
-
-curl -k localhost:3003/v1/restaurants -H "Accept: application/json" -H "Content-Type: application/json"
-curl -k localhost:3003/v1/restaurants?cuisine=thai&grade=B -H "Accept: application/json" -H "Content-Type: application/json"
-curl -k localhost:3003/v1/restaurants?cuisine=american -H "Accept: application/json" -H "Content-Type: application/json"
-curl -k localhost:3003/v1/restaurants?grade=C -H "Accept: application/json" -H "Content-Type: application/json"
-
-
 **Example Usage**
 
-TODO
+`curl -k localhost:3003/v1/restaurants -H "Accept: application/json" -H "Content-Type: application/json"`
 
 **Example response:**
 
@@ -77,7 +69,7 @@ TODO
 
 **Example Usage**
 
-TODO
+`curl -k localhost:3003/v1/restaurants?cuisine=American -H "Accept: application/json" -H "Content-Type: application/json"`
 
 **Example response:**
 
@@ -85,7 +77,15 @@ TODO
 
 **Example Usage**
 
+`curl -k localhost:3003/v1/restaurants?grade=C -H "Accept: application/json" -H "Content-Type: application/json"`
+
+**Example response:**
+
 TODO
+
+**Example Usage**
+
+`curl -k localhost:3003/v1/restaurants?cuisine=thai&grade=B -H "Accept: application/json" -H "Content-Type: application/json"`
 
 **Example response:**
 
@@ -95,7 +95,7 @@ TODO
 
 ### Notes on the ETL Pipeline and Schema
 
-Performing major statistical analysis on this data set is not necessary. Rather, the pipeline cleans the data set, drops irrelevant values, and populates a sqlite3 database. The created table is general, i.e. a simple "restaurants" table. By being more general, it becomes easier to build out a comperehensive API without limiting the project. 
+Performing major statistical analysis on this data set is not necessary. The pipeline cleans the data set, drops irrelevant values, and populates a sqlite3 database. The created table is general, i.e. a simple "restaurants" table. By being more general, it becomes easier to build out a comperehensive API without limiting the project. 
 
 
 Each table entry contains basic establishment info as shown below. These fields are generally available for all restaurants.
@@ -124,11 +124,11 @@ backend-app
 │   requirements.txt    
 │
 └───bin
-│       run_etl.py - This is a python script to extract code from the data set and store it in a sqlite3 database.
+│       run_etl.py - This is a python script that populates a sqlite3 database given a cleaned .csv file. 
 │
 └───data
 │       DOHMH_New_York_City_Restaurant_Inspection_Results.csv - Our data set.
-|       etl_notebook.ipynb - An ipython notebook used to test the ETL pipeline.
+|       etl_notebook.ipynb - An ipython notebook functioning as the ETL pipeline. Outputs a cleaned .csv file. 
 │
 └───env
 │
@@ -138,12 +138,13 @@ backend-app
 │   |
 │   └───models
 │   |       restaurants.py - Interfaces with the "restaurants" database table. 
-|   |
 │   |
 │   └───routes
-|           restaurants.py - Defines /restaurant routes.
+|   |       restaurants.py - Defines /restaurant routes.
+│   |
+│   └───util
+|           restaurant_data.py - Defines accepted grade and cuisine types.
 |
-│
 └───test
         test.py - Simple test script to test our endpoints.
 
@@ -156,6 +157,7 @@ backend-app
 - Add comprehensive logging
 - Add schema validation for incoming requests
 - Some cuisine types are long, malformed, or not descriptive - create a better schema.
+- Squash some commits. 
 
 ---
 
