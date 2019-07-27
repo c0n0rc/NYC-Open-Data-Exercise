@@ -16,7 +16,7 @@ def get_restaurants():
         conn = sqlite3.connect("restaurants.db")
     except Error as e:
         print(e)
-        return 500, 'Interal error connecting to the database.'
+        return 500, 'Internal error connecting to the database.'
 
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM restaurants LIMIT 10')
@@ -50,7 +50,7 @@ def filter_by_grade(grade):
         conn = sqlite3.connect("restaurants.db")
     except Error as e:
         print(e)
-        return 500, 'Interal error connecting to the database.'
+        return 500, 'Internal error connecting to the database.'
 
     cursor = conn.cursor()
 
@@ -97,7 +97,7 @@ def filter_by_cuisine(cuisine):
         conn = sqlite3.connect("restaurants.db")
     except Error as e:
         print(e)
-        return 500, 'Interal error connecting to the database.'
+        return 500, 'Internal error connecting to the database.'
 
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM restaurants WHERE CUISINE_DESCRIPTION = ? LIMIT 10', (cuisine,))
@@ -131,7 +131,7 @@ def filter_by_cuisine_and_grade(cuisine, grade):
         conn = sqlite3.connect("restaurants.db")
     except Error as e:
         print(e)
-        return 500, 'Interal error connecting to the database.'
+        return 500, 'Internal error connecting to the database.'
 
     cursor = conn.cursor()
 

@@ -6,7 +6,12 @@ This project reads in data from an [NYC Open Data Set](https://data.cityofnewyor
 
 ### Give it a try!
 
-App is running live at: ``
+Submit curl requests to: `https://protected-taiga-66439.herokuapp.com`.
+
+Ex:
+```
+curl -k "http://protected-taiga-66439.herokuapp.com/v1/restaurants" -H "Accept: application/json" -H "Content-Type: application/json"
+```
 
 ---
 
