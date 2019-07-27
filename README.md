@@ -445,7 +445,7 @@ backend-app
 │       DOHMH_New_York_City_Restaurant_Inspection_Results.csv - Our data set (not included in this repo).
 │       DOHMH_New_York_City_Restaurant_Inspection_Results.csv.zip - Zip of the set I used in this project. 
 |       etl_notebook.ipynb - An ipython notebook functioning as the ETL pipeline. Outputs a cleaned .csv file. 
-|       cleaned_data.csv - Cleaned .csv created by etl_notebook.ipynb.
+|       cleaned_data.csv.zip - Cleaned .csv created by etl_notebook.ipynb.
 │
 └───env
 │
