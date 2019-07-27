@@ -4,36 +4,44 @@ This project reads in data from an [NYC Open Data Set](https://data.cityofnewyor
 
 ---
 
+### Give it a try!
+
+App is running live at: ``
+
+---
+
 ### To Build
 
-This project was developed in Python 3 in a Python virtual environment. To install a virtual environment, follow the instructions [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
+This project was developed in Python 3 in a Python virtual environment. To install a virtual environment, follow the instructions [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). After cloning this repo, follow the below steps to get everything running.
 
 To activate an environment and install the necessary packages, run:
 
 ```
+git clone git@github.com:c0n0rc/restaurant_app.git
+python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
 
-To get the server running, run:
-```
-python3 main.py
-```
-
-To run the IPython notebook, run:
+To run the IPython notebook, in the /data directory, run:
 ```
 jupyter notebook etl_notebook.ipynb
 ```
 
-The notebook creates a cleaned .csv file. To populate a database with the clean file, run:
+Note, you may need to restart the kernel and clear the output. The notebook creates a cleaned .csv file. (The notebook is based off the .zip in the /data directory - since new columns can be added by NYC Open Data, some of the assertions might not work with newer data.) After expanding the .zip and running the notebook, populate the database with the clean file, by running:
 ```
 python3 bin/run_etl.py
+```
+
+With the database created, to get the server running, run:
+```
+python3 server/main.py
 ```
 
 ### To Test
 
 
-In the test directory, there is a simple script to test the API endpoint with a different parameters. To test, run:
+In the test directory, there is a simple script to test the API endpoint with a different parameters. To test, with the main server running, run:
 ```
 python3 test.py
 ``` 
@@ -396,7 +404,7 @@ Order not quaranteed.
 
 ### Notes on Performance
 
-This project was built to quickly ingest data, clean it, and populate a simple database table. In the future, it would make sense to ingest the data in a different way, i.e. be capable of continuously ingesting streaming data. To facilitate different API capabilities, it could also be beneficial to break the "restaurants" table into a main reference table and multiple smaller tables - values like grades and cuisine types would be their own "state" tables. In addition, there would need to be table cleaning policies to make sure data isn't stale nor the table too large. 
+This project was built to quickly ingest data, clean it, and populate a simple database table. In the future, it would make sense to ingest the data in a different way, i.e. be capable of continuously ingesting streaming data. To facilitate different API capabilities, it could also be beneficial to break the "restaurants" table into a main reference table and multiple smaller tables - values like grades and cuisine types would be their own "state" tables. In addition, there would need to be table cleaning policies to make sure data isn't stale nor the table too large. In addition, new columns can be added by NYC Open Data at any time, care should be taken to ensure this does not break the pipeline. 
 
 ---
 
@@ -434,7 +442,8 @@ backend-app
 │       run_etl.py - This is a python script that populates a sqlite3 database given a cleaned .csv file. 
 │
 └───data
-│       DOHMH_New_York_City_Restaurant_Inspection_Results.csv - Our data set.
+│       DOHMH_New_York_City_Restaurant_Inspection_Results.csv - Our data set (not included in this repo).
+│       DOHMH_New_York_City_Restaurant_Inspection_Results.csv.zip - Zip of the set I used in this project. 
 |       etl_notebook.ipynb - An ipython notebook functioning as the ETL pipeline. Outputs a cleaned .csv file. 
 |       cleaned_data.csv - Cleaned .csv created by etl_notebook.ipynb.
 │
@@ -442,10 +451,11 @@ backend-app
 │
 │
 └───server
+│   |    main.py - Main entry point to get the server running.
 │   |
 │   |
 │   └───models
-│   |       restaurants.py - Interfaces with the "restaurants" database table. 
+│   |       restaurants.py - Interfaces with the "restaurants" database and table. 
 │   |
 │   └───routes
 |   |       restaurants.py - Defines /restaurant route(s).
@@ -462,8 +472,9 @@ backend-app
 
 ### TODO
 
-- Add comprehensive logging
-- Add schema validation for incoming requests
+- Add comprehensive logging.
+- Package into deliverable app. 
+- Add schema validation for incoming requests.
 - Some cuisine types are long, malformed, or not descriptive - create a better schema.
 - Restaurant names (DBA) are all uppercase - could use prettier formatting. 
 - Squash some commits. 
