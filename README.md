@@ -1,6 +1,6 @@
 ### Overview
 
-This project entails reading in data from an [NYC Open Data Set](https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv), running it through an ETL pipeline, and storing the clean data in a sqlite3 database. With the database populated, users can make requests to an API endpoint that, given a Health Department grade and cuisine type, will return a list of 10 max establishments for a given cuisine which satisfy said Health Department rating.
+This project reads in data from an [NYC Open Data Set](https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv), runs it through an ETL pipeline, and stores the clean data in a sqlite3 database. With the database populated, users can make requests to an API endpoint that, given a Health Department grade and/or cuisine type, will return a list of 10 max establishments for a given cuisine which satisfy said Health Department rating.
 
 ---
 
@@ -104,7 +104,7 @@ Order not quaranteed.
 
 ### Notes on Performance
 
-This project was built to quickly injest data, clean it, and populate a simple database table. In the future, it would make sense to injest the data in a different way, i.e. be capable of continuously injesting streaming data. To facilitate different API capabilities, it could also be beneficial to break the "restaurants" table into a main reference table, and multiple smaller tables - values like grades and cuisine types would be their own "state" tables. In addition, there would need to be table cleaning policies to make sure data isn't stale nor the table too large. 
+This project was built to quickly ingest data, clean it, and populate a simple database table. In the future, it would make sense to ingest the data in a different way, i.e. be capable of continuously ingesting streaming data. To facilitate different API capabilities, it could also be beneficial to break the "restaurants" table into a main reference table and multiple smaller tables - values like grades and cuisine types would be their own "state" tables. In addition, there would need to be table cleaning policies to make sure data isn't stale nor the table too large. 
 
 ---
 
