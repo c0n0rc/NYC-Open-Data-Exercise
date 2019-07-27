@@ -67,7 +67,80 @@ Order not quaranteed.
 **Example response:**
 
 ```
-{"data": [{"name": "MORRIS PARK BAKE SHOP", "address": "1007 MORRIS PARK AVE, BRONX, 10462", "phone": "7188924968", "cuisine_type": "bakery", "grade": "A"}, {"name": "WENDY'S", "address": "469 FLATBUSH AVENUE, BROOKLYN, 11225", "phone": "7182875005", "cuisine_type": "hamburgers", "grade": "A"}, {"name": "DJ REYNOLDS PUB AND RESTAURANT", "address": "351 WEST   57 STREET, MANHATTAN, 10019", "phone": "2122452912", "cuisine_type": "irish", "grade": "A"}, {"name": "RIVIERA CATERERS", "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224", "phone": "7183723031", "cuisine_type": "american", "grade": "A"}, {"name": "BRUNOS ON THE BOULEVARD", "address": "8825 ASTORIA BOULEVARD, QUEENS, 11369", "phone": "7183350505", "cuisine_type": "american", "grade": "U"}, {"name": "WILKEN'S FINE FOOD", "address": "7114 AVENUE U, BROOKLYN, 11234", "phone": "7184443838", "cuisine_type": "delicatessen", "grade": "A"}, {"name": "TASTE THE TROPICS ICE CREAM", "address": "1839 NOSTRAND AVENUE, BROOKLYN, 11226", "phone": "7188560821", "cuisine_type": "ice cream, gelato, yogurt, ices", "grade": "A"}, {"name": "WILD ASIA", "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460", "phone": "7182207846", "cuisine_type": "american", "grade": "A"}, {"name": "1 EAST 66TH STREET KITCHEN", "address": "1 EAST   66 STREET, MANHATTAN, 10065", "phone": "2128793900", "cuisine_type": "american", "grade": "A"}, {"name": "NATHAN'S FAMOUS", "address": "1310 SURF AVENUE, BROOKLYN, 11224", "phone": "7183332202", "cuisine_type": "hotdogs", "grade": "A"}]}
+{
+  "data": [
+    {
+      "name": "MORRIS PARK BAKE SHOP",
+      "address": "1007 MORRIS PARK AVE, BRONX, 10462",
+      "phone": "7188924968",
+      "cuisine_type": "bakery",
+      "grade": "A"
+    },
+    {
+      "name": "WENDY'S",
+      "address": "469 FLATBUSH AVENUE, BROOKLYN, 11225",
+      "phone": "7182875005",
+      "cuisine_type": "hamburgers",
+      "grade": "A"
+    },
+    {
+      "name": "DJ REYNOLDS PUB AND RESTAURANT",
+      "address": "351 WEST   57 STREET, MANHATTAN, 10019",
+      "phone": "2122452912",
+      "cuisine_type": "irish",
+      "grade": "A"
+    },
+    {
+      "name": "RIVIERA CATERERS",
+      "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224",
+      "phone": "7183723031",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "BRUNOS ON THE BOULEVARD",
+      "address": "8825 ASTORIA BOULEVARD, QUEENS, 11369",
+      "phone": "7183350505",
+      "cuisine_type": "american",
+      "grade": "U"
+    },
+    {
+      "name": "WILKEN'S FINE FOOD",
+      "address": "7114 AVENUE U, BROOKLYN, 11234",
+      "phone": "7184443838",
+      "cuisine_type": "delicatessen",
+      "grade": "A"
+    },
+    {
+      "name": "TASTE THE TROPICS ICE CREAM",
+      "address": "1839 NOSTRAND AVENUE, BROOKLYN, 11226",
+      "phone": "7188560821",
+      "cuisine_type": "ice cream, gelato, yogurt, ices",
+      "grade": "A"
+    },
+    {
+      "name": "WILD ASIA",
+      "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460",
+      "phone": "7182207846",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "1 EAST 66TH STREET KITCHEN",
+      "address": "1 EAST   66 STREET, MANHATTAN, 10065",
+      "phone": "2128793900",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "NATHAN'S FAMOUS",
+      "address": "1310 SURF AVENUE, BROOKLYN, 11224",
+      "phone": "7183332202",
+      "cuisine_type": "hotdogs",
+      "grade": "A"
+    }
+  ]
+}
 ```
 
 **Example Usage**
@@ -77,7 +150,80 @@ Order not quaranteed.
 **Example response:**
 
 ```
-{"data": [{"name": "RIVIERA CATERERS", "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224", "phone": "7183723031", "cuisine_type": "american", "grade": "A"}, {"name": "BRUNOS ON THE BOULEVARD", "address": "8825 ASTORIA BOULEVARD, QUEENS, 11369", "phone": "7183350505", "cuisine_type": "american", "grade": "U"}, {"name": "WILD ASIA", "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460", "phone": "7182207846", "cuisine_type": "american", "grade": "A"}, {"name": "1 EAST 66TH STREET KITCHEN", "address": "1 EAST   66 STREET, MANHATTAN, 10065", "phone": "2128793900", "cuisine_type": "american", "grade": "A"}, {"name": "P & S DELI GROCERY", "address": "730 COLUMBUS AVENUE, MANHATTAN, 10025", "phone": "2129323030", "cuisine_type": "american", "grade": "A"}, {"name": "ANGELIKA FILM CENTER", "address": "18 WEST HOUSTON STREET, MANHATTAN, 10012", "phone": "2129952570", "cuisine_type": "american", "grade": "A"}, {"name": "CAFE METRO", "address": "625 8 AVENUE, MANHATTAN, 10018", "phone": "2127149342", "cuisine_type": "american", "grade": "A"}, {"name": "BERKELEY", "address": "437 MADISON AVENUE, MANHATTAN, 10022", "phone": "2128328121", "cuisine_type": "american", "grade": "A"}, {"name": "METROPOLITAN CLUB", "address": "1 EAST   60 STREET, MANHATTAN, 10022", "phone": "2128387400", "cuisine_type": "american", "grade": "A"}, {"name": "21 CLUB", "address": "21 WEST   52 STREET, MANHATTAN, 10019", "phone": "2125827200", "cuisine_type": "american", "grade": "A"}]}
+{
+  "data": [
+    {
+      "name": "RIVIERA CATERERS",
+      "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224",
+      "phone": "7183723031",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "BRUNOS ON THE BOULEVARD",
+      "address": "8825 ASTORIA BOULEVARD, QUEENS, 11369",
+      "phone": "7183350505",
+      "cuisine_type": "american",
+      "grade": "U"
+    },
+    {
+      "name": "WILD ASIA",
+      "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460",
+      "phone": "7182207846",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "1 EAST 66TH STREET KITCHEN",
+      "address": "1 EAST   66 STREET, MANHATTAN, 10065",
+      "phone": "2128793900",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "P & S DELI GROCERY",
+      "address": "730 COLUMBUS AVENUE, MANHATTAN, 10025",
+      "phone": "2129323030",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "ANGELIKA FILM CENTER",
+      "address": "18 WEST HOUSTON STREET, MANHATTAN, 10012",
+      "phone": "2129952570",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "CAFE METRO",
+      "address": "625 8 AVENUE, MANHATTAN, 10018",
+      "phone": "2127149342",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "BERKELEY",
+      "address": "437 MADISON AVENUE, MANHATTAN, 10022",
+      "phone": "2128328121",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "METROPOLITAN CLUB",
+      "address": "1 EAST   60 STREET, MANHATTAN, 10022",
+      "phone": "2128387400",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "21 CLUB",
+      "address": "21 WEST   52 STREET, MANHATTAN, 10019",
+      "phone": "2125827200",
+      "cuisine_type": "american",
+      "grade": "A"
+    }
+  ]
+}
 ```
 
 **Example Usage**
@@ -87,7 +233,80 @@ Order not quaranteed.
 **Example response:**
 
 ```
-{"data": [{"name": "MORRIS PARK BAKE SHOP", "address": "1007 MORRIS PARK AVE, BRONX, 10462", "phone": "7188924968", "cuisine_type": "bakery", "grade": "A"}, {"name": "WENDY'S", "address": "469 FLATBUSH AVENUE, BROOKLYN, 11225", "phone": "7182875005", "cuisine_type": "hamburgers", "grade": "A"}, {"name": "DJ REYNOLDS PUB AND RESTAURANT", "address": "351 WEST   57 STREET, MANHATTAN, 10019", "phone": "2122452912", "cuisine_type": "irish", "grade": "A"}, {"name": "RIVIERA CATERERS", "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224", "phone": "7183723031", "cuisine_type": "american", "grade": "A"}, {"name": "WILKEN'S FINE FOOD", "address": "7114 AVENUE U, BROOKLYN, 11234", "phone": "7184443838", "cuisine_type": "delicatessen", "grade": "A"}, {"name": "TASTE THE TROPICS ICE CREAM", "address": "1839 NOSTRAND AVENUE, BROOKLYN, 11226", "phone": "7188560821", "cuisine_type": "ice cream, gelato, yogurt, ices", "grade": "A"}, {"name": "WILD ASIA", "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460", "phone": "7182207846", "cuisine_type": "american", "grade": "A"}, {"name": "1 EAST 66TH STREET KITCHEN", "address": "1 EAST   66 STREET, MANHATTAN, 10065", "phone": "2128793900", "cuisine_type": "american", "grade": "A"}, {"name": "NATHAN'S FAMOUS", "address": "1310 SURF AVENUE, BROOKLYN, 11224", "phone": "7183332202", "cuisine_type": "hotdogs", "grade": "A"}, {"name": "SEUDA FOODS", "address": "705 KINGS HIGHWAY, BROOKLYN, 11223", "phone": "7183751500", "cuisine_type": "jewish/kosher", "grade": "A"}]}
+{
+  "data": [
+    {
+      "name": "MORRIS PARK BAKE SHOP",
+      "address": "1007 MORRIS PARK AVE, BRONX, 10462",
+      "phone": "7188924968",
+      "cuisine_type": "bakery",
+      "grade": "A"
+    },
+    {
+      "name": "WENDY'S",
+      "address": "469 FLATBUSH AVENUE, BROOKLYN, 11225",
+      "phone": "7182875005",
+      "cuisine_type": "hamburgers",
+      "grade": "A"
+    },
+    {
+      "name": "DJ REYNOLDS PUB AND RESTAURANT",
+      "address": "351 WEST   57 STREET, MANHATTAN, 10019",
+      "phone": "2122452912",
+      "cuisine_type": "irish",
+      "grade": "A"
+    },
+    {
+      "name": "RIVIERA CATERERS",
+      "address": "2780 STILLWELL AVENUE, BROOKLYN, 11224",
+      "phone": "7183723031",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "WILKEN'S FINE FOOD",
+      "address": "7114 AVENUE U, BROOKLYN, 11234",
+      "phone": "7184443838",
+      "cuisine_type": "delicatessen",
+      "grade": "A"
+    },
+    {
+      "name": "TASTE THE TROPICS ICE CREAM",
+      "address": "1839 NOSTRAND AVENUE, BROOKLYN, 11226",
+      "phone": "7188560821",
+      "cuisine_type": "ice cream, gelato, yogurt, ices",
+      "grade": "A"
+    },
+    {
+      "name": "WILD ASIA",
+      "address": "2300 SOUTHERN BOULEVARD, BRONX, 10460",
+      "phone": "7182207846",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "1 EAST 66TH STREET KITCHEN",
+      "address": "1 EAST   66 STREET, MANHATTAN, 10065",
+      "phone": "2128793900",
+      "cuisine_type": "american",
+      "grade": "A"
+    },
+    {
+      "name": "NATHAN'S FAMOUS",
+      "address": "1310 SURF AVENUE, BROOKLYN, 11224",
+      "phone": "7183332202",
+      "cuisine_type": "hotdogs",
+      "grade": "A"
+    },
+    {
+      "name": "SEUDA FOODS",
+      "address": "705 KINGS HIGHWAY, BROOKLYN, 11223",
+      "phone": "7183751500",
+      "cuisine_type": "jewish/kosher",
+      "grade": "A"
+    }
+  ]
+}
 ```
 
 **Example Usage**
@@ -97,7 +316,80 @@ Order not quaranteed.
 **Example response:**
 
 ```
-{"data": [{"name": "JAIYA THAI ORIENTAL RESTAURANT", "address": "396 THIRD AVENUE, MANHATTAN, 10016", "phone": "2128891330", "cuisine_type": "thai", "grade": "A"}, {"name": "BENNIE'S THAI CAFE", "address": "88 FULTON STREET, MANHATTAN, 10038", "phone": "2125878930", "cuisine_type": "thai", "grade": "A"}, {"name": "ERAWAN THAI CUISINE", "address": "4231 BELL BOULEVARD, QUEENS, 11361", "phone": "7184282112", "cuisine_type": "thai", "grade": "A"}, {"name": "LOVELY DAY", "address": "196 ELIZABETH STREET, MANHATTAN, 10012", "phone": "2129253310", "cuisine_type": "thai", "grade": "A"}, {"name": "KUMA INN", "address": "113 LUDLOW STREET, MANHATTAN, 10002", "phone": "2123538866", "cuisine_type": "thai", "grade": "A"}, {"name": "TEEDA THAI CUISINE", "address": "218 COLUMBIA STREET, BROOKLYN, 11231", "phone": "7186432737", "cuisine_type": "thai", "grade": "A"}, {"name": "GALANGA THAI COOKING", "address": "149 WEST 4 STREET, MANHATTAN, 10012", "phone": "2122284367", "cuisine_type": "thai", "grade": "A"}, {"name": "LAND THAI KITCHEN", "address": "450 AMSTERDAM AVENUE, MANHATTAN, 10024", "phone": "2125018121", "cuisine_type": "thai", "grade": "B"}, {"name": "LANTERN", "address": "101 MONTAGUE STREET, BROOKLYN, 11201", "phone": "7182372594", "cuisine_type": "thai", "grade": "A"}, {"name": "THAI ELEPHANT RESTAURANT", "address": "2109 31 STREET, QUEENS, 11105", "phone": "7182048827", "cuisine_type": "thai", "grade": "A"}]}
+{
+  "data": [
+    {
+      "name": "JAIYA THAI ORIENTAL RESTAURANT",
+      "address": "396 THIRD AVENUE, MANHATTAN, 10016",
+      "phone": "2128891330",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "BENNIE'S THAI CAFE",
+      "address": "88 FULTON STREET, MANHATTAN, 10038",
+      "phone": "2125878930",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "ERAWAN THAI CUISINE",
+      "address": "4231 BELL BOULEVARD, QUEENS, 11361",
+      "phone": "7184282112",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "LOVELY DAY",
+      "address": "196 ELIZABETH STREET, MANHATTAN, 10012",
+      "phone": "2129253310",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "KUMA INN",
+      "address": "113 LUDLOW STREET, MANHATTAN, 10002",
+      "phone": "2123538866",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "TEEDA THAI CUISINE",
+      "address": "218 COLUMBIA STREET, BROOKLYN, 11231",
+      "phone": "7186432737",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "GALANGA THAI COOKING",
+      "address": "149 WEST 4 STREET, MANHATTAN, 10012",
+      "phone": "2122284367",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "LAND THAI KITCHEN",
+      "address": "450 AMSTERDAM AVENUE, MANHATTAN, 10024",
+      "phone": "2125018121",
+      "cuisine_type": "thai",
+      "grade": "B"
+    },
+    {
+      "name": "LANTERN",
+      "address": "101 MONTAGUE STREET, BROOKLYN, 11201",
+      "phone": "7182372594",
+      "cuisine_type": "thai",
+      "grade": "A"
+    },
+    {
+      "name": "THAI ELEPHANT RESTAURANT",
+      "address": "2109 31 STREET, QUEENS, 11105",
+      "phone": "7182048827",
+      "cuisine_type": "thai",
+      "grade": "A"
+    }
+  ]
+}
 ```
 
 ---
