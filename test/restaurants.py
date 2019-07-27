@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
   response = requests.get(
       hostname + port + API_VERSION + '/restaurants',
-      params={'grade': 'A'}
+      params={'grade': 'B'}
   )
 
   passed = True if response.status_code == 200 else False
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
   response = requests.get(
       hostname + port + API_VERSION + '/restaurants',
-      params={'cuisine': 'Thai', 'grade': 'A'}
+      params={'cuisine': 'Thai', 'grade': 'B'}
   )
 
   passed = True if response.status_code == 200 else False

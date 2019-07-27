@@ -24,8 +24,8 @@ def get_restaurants():
     status_mesg = 'Success'
 
     # Grab filter params
-    cuisine_param = urlparse(request.args.get('cuisine')).path.lower()
-    grade_param   = urlparse(request.args.get('grade')).path.upper()
+    cuisine_param = request.args.get('cuisine').lower() if request.args.get('cuisine') else None
+    grade_param   = request.args.get('grade').upper() if request.args.get('grade') else None
 
     # If either params are present, return a filtered list
     if cuisine_param or grade_param:

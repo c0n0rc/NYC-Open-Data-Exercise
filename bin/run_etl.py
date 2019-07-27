@@ -26,7 +26,7 @@ conn.execute('''CREATE TABLE restaurants (DBA text, BORO text, BUILDING integer,
 
 # Populate using a dataframe.
 # TODO: Is this one transaction?
-df.to_sql('restaurants', conn, if_exists = 'replace')
+df.to_sql('restaurants', conn, if_exists = 'append', index = False)
 
 conn.commit()
 
