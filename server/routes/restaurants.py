@@ -17,15 +17,15 @@ restaurants = Blueprint('restaurants', __name__)
 API_VERSION = '/v1'
 
 # Returns a list of restaurants. If 'cuisine' or 'grade' parameters are given, returns a filtered list. 
-# Returns max of 50 restaurants in no particular order.
+# Returns max of 10 restaurants in no particular order.
 @restaurants.route(API_VERSION + '/restaurants', methods=['GET'])
 def get_restaurants():
     status_code = 200
     status_mesg = 'Success'
 
     # Grab filter params
-    cuisine_param = urlparse(request.args.get('cuisine')).path
-    grade_param   = urlparse(request.args.get('grade')).path
+    cuisine_param = urlparse(request.args.get('cuisine')).path.lower()
+    grade_param   = urlparse(request.args.get('grade')).path.upper()
 
     # If either params are present, return a filtered list
     if cuisine_param or grade_param:

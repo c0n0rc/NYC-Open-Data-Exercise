@@ -31,12 +31,23 @@ if __name__ == '__main__':
 
   response = requests.get(
       hostname + port + API_VERSION + '/restaurants',
-      params={'cuisine': 'Thai'}
+      params={'cuisine': 'thai'}
   )
 
   passed = True if response.status_code == 200 else False
 
-  print(f'Endpoint filters by cuisine: {passed}')
+  print(f'Endpoint filters by cuisine (lowercase): {passed}')
+
+  ###
+
+  response = requests.get(
+      hostname + port + API_VERSION + '/restaurants',
+      params={'cuisine': 'IRISH'}
+  )
+
+  passed = True if response.status_code == 200 else False
+
+  print(f'Endpoint filters by cuisine (uppercase): {passed}')
 
   ###
 

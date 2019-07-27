@@ -1,6 +1,6 @@
 ### Overview
 
-This project entails reading in data from an [NYC Open Data Set](https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv), running it through an ETL pipeline, and storing the clean data in a sqlite3 database. With the database populated, users can make requests to an API endpoint that, given a Health Department grade and cuisine type, will return a list of 50 max establishments for a given cuisine which satisfy said Health Department rating.
+This project entails reading in data from an [NYC Open Data Set](https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv), running it through an ETL pipeline, and storing the clean data in a sqlite3 database. With the database populated, users can make requests to an API endpoint that, given a Health Department grade and cuisine type, will return a list of 10 max establishments for a given cuisine which satisfy said Health Department rating.
 
 ---
 
@@ -22,7 +22,7 @@ python3 main.py
 
 To run the ETL pipeline (only run once):
 ```
-python3 /bin/run_etl.py
+python3 bin/run_etl.py
 ```
 
 ### To Test
@@ -56,7 +56,7 @@ The server accepts requests on port 3003. Below is a description of the API.
 
 **Result:**
 Returns a list of restaurants found in the database. If `cuisine` and/or `grade` are provided, returns a list of 
-restaurants of a given `cuisine` type that have Health Department ratings of `grade` or higher. Max limit of 50 results. 
+restaurants of a given `cuisine` type that have Health Department ratings of `grade` or higher. Max limit of 10 results. 
 Order not quaranteed. 
 
 **Example Usage**
@@ -120,8 +120,8 @@ For this project, I felt that a separate /server/handlers folder was not necessa
 
 ```
 backend-app
-│   README
-│   requirements.txt    
+│   README - You're reading it!
+│   requirements.txt - Virtual environment requirements.
 │
 └───bin
 │       run_etl.py - This is a python script that populates a sqlite3 database given a cleaned .csv file. 
@@ -129,6 +129,7 @@ backend-app
 └───data
 │       DOHMH_New_York_City_Restaurant_Inspection_Results.csv - Our data set.
 |       etl_notebook.ipynb - An ipython notebook functioning as the ETL pipeline. Outputs a cleaned .csv file. 
+|       cleaned_data.csv - Cleaned .csv created by etl_notebook.ipynb.
 │
 └───env
 │
@@ -140,7 +141,7 @@ backend-app
 │   |       restaurants.py - Interfaces with the "restaurants" database table. 
 │   |
 │   └───routes
-|   |       restaurants.py - Defines /restaurant routes.
+|   |       restaurants.py - Defines /restaurant route(s).
 │   |
 │   └───util
 |           restaurant_data.py - Defines accepted grade and cuisine types.
@@ -157,6 +158,7 @@ backend-app
 - Add comprehensive logging
 - Add schema validation for incoming requests
 - Some cuisine types are long, malformed, or not descriptive - create a better schema.
+- Restaurant names (DBA) are all uppercase - could use prettier formatting. 
 - Squash some commits. 
 
 ---
