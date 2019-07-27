@@ -129,3 +129,5 @@ dmypy.json
 
 data/*.csv
 
+# Database
+*.db

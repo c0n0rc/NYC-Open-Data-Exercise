@@ -20,17 +20,18 @@ To get the server running, run:
 python3 main.py
 ```
 
-To run the ETL pipeline (only run once):
+To run the IPython notebook, run:
+```
+jupyter notebook etl_notebook.ipynb
+```
+
+The notebook creates a cleaned .csv file. To populate a database with the clean file, run:
 ```
 python3 bin/run_etl.py
 ```
 
 ### To Test
 
-To run the IPython notebook to test the ETL pipeline, run:
-```
-jupyter notebook etl_notebook.ipynb
-```
 
 In the test directory, there is a simple script to test the API endpoint with a different parameters. To test, run:
 ```
